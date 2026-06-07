@@ -10,19 +10,17 @@ export default function App() {
   const [estaCargando, setEstaCargando] = useState(true);
 
   useEffect(() => {
-    // Esto hará que la imagen se vea por 3 segundos en la web
     const timer = setTimeout(() => {
       setEstaCargando(false);
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
-  // ESTA ES TU PANTALLA DE CARGA PARA WEB Y MÓVIL
   if (estaCargando) {
     return (
       <View style={{ 
         flex: 1, 
-        backgroundColor: '#ffffff', // El fondo oscuro que elegiste
+        backgroundColor: '#ffffff', 
         justifyContent: 'center', 
         alignItems: 'center' 
       }}>
@@ -31,13 +29,12 @@ export default function App() {
           style={{ width: 250, height: 250 }} 
           resizeMode="contain"
         />
-        {/* Agregamos un circulito de carga para que el usuario sepa que está pasando algo */}
+    
         <ActivityIndicator size="large" color="#2a20bd" style={{ marginTop: 20 }} />
       </View>
     );
   }
 
-  // CUANDO TERMINA DE CARGAR, MUESTRA LA NAVEGACIÓN
   return (
     <NavigationContainer>
       <Stack.Navigator>

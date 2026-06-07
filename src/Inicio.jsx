@@ -19,7 +19,6 @@ export default function Inicio() {
 
     return (
         <View style={styles.mainContainer}>
-            {/* Cabecera Violeta */}
             <View style={styles.header}>
                 <Text style={styles.headerText}>La mejor login app</Text>
             </View>

@@ -24,14 +24,13 @@ export default function Inicio() {
             </View>
 
             <View style={styles.content}>
-                {/* Logo */}
+            
                 <Image
                     source={require('../assets/logoOrt.png')}
                     style={styles.logo}
                     resizeMode="contain"
                 />
 
-                {/* Inputs */}
                 <TextInput
                     style={styles.input}
                     placeholder="email@EfsiEsLaMejorMateria.com"
